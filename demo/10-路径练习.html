@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>路径练习</title>
+</head>
+<body>
+
+<!--绝对路径不显示的原因：
+    1.检查路径是否正确
+    2.html实在web服务器上,即浏览器的地址是http:// 而不是file:///,那么是不允许打开file://开头的本地图片的
+    这是出于安全考虑.
+    3.html通过本地启动,即直接打开路径,双击.html文件即可-->
+
+<!--同级-->
+<img src="E:/WebstormProjects/代码/demo/2.jpg" title="绝对路径">
+<img src="2.jpg" >
+
+<!--上级-->
+<img src="E:\WebstormProjects\代码\timg.jpg" title="绝对路径">
+<img src="../timg.jpg">
+
+<!--下级-->
+<img src="E:\WebstormProjects\代码\demo\img\1.jpg" title="绝对路径">
+<img src="img/1.jpg">
+</body>
+</html>
