@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>34-表单练习</title>
+</head>
+<body>
+<form action="">
+    <p>
+        账号:<input type="text" name="account">
+    </p>
+    <p>
+        密码:<input type="password" name="pwd">
+    </p>
+    <!--在单选框和多选框中,所有项目的name必须一致
+        在表单标签中,除了按钮标签以外的标签,都可以通过value来
+        指定需要提交到服务器的数据-->
+    <p>
+     性别<input type="radio" name="sex" value="male">男
+        <input type="radio" name="sex" value="female">女
+        <input type="radio" name="sex" value="yao" checked="checked" >保密
+    </p>
+    <p>
+        <input type="checkbox" name="hobby" value="basketball">篮球
+        <input type="checkbox" name="hobby" value="football">足球
+        <input type="checkbox" name="hobby" value="baseball">棒球
+    </p>
+    <p>
+        个人简介:<textarea cols="20" rows="5" name="introduce"></textarea>
+    </p>
+    <p>
+        生日：<input type="date" name="birthday">
+    </p>
+    <p>
+        邮箱：<input type="email" name="email">
+    </p>
+    <p>
+        手机：<input type="number" name="phone">
+    </p>
+    <p>
+        <input type="submit" value="提交"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="reset" value="清空">
+    </p>
+</form>
+</body>
+</html>
