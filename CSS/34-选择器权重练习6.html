@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>34-选择器权重练习6</title>
+    <style type=text/css">
+        /*p标签直接选中,且1个id*/
+        #father #son{
+            color: blue;
+        }
+        /*1个id*/
+        #father p.box2{
+            color: black;
+        }
+        /*0个id*/
+        div.box1 p.box2{
+            color: red;
+        }
+        /*1个id 0个类名 但有!important 所以权重最高*/
+        #father{
+            color: green !important;
+        }
+        /*1个id 1个类名*/
+        div#father.box1{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="father" class="box1">
+        这不是内容吗?
+        <p id="son" class="box2">
+            这行文字是什么颜色
+        </p>
+    </div>
+</body>
+</html>

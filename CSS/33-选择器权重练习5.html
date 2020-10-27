@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>33-选择器权重练习5</title>
+    <style type="text/css">
+        /*0个id 2个类型 1个标签*/
+        .box1 .box2 div{
+            color: blue;
+        }
+        /*1个id 0个类型 1个标签 0个通配符*/
+        div #identity3{
+            color: green;
+        }
+        /*1个id 0个类型 1个标签 0个通配符 后面的说了算*/
+        #identity1 div{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="identity1" class="box1">
+        <div id="identity2" class="box2">
+            <div id="identity3" class="box3">
+                文字
+            </div>
+        </div>
+    </div>
+</body>
+</html>
