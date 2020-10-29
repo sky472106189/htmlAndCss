@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>49-边框属性下</title>
+    <style type="text/css">
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+
+            /*按要素连写(分别设置四条边)
+            border-width: 5px 10px 15px 20px;
+            border-style: solid dashed dotted double;
+            border-color: blue green purple pink;*/
+            /*border-color: blue green purple;*/
+            /*border-color: blue green;*/
+            /*border-color: blue;*/
+
+
+            /*非连写(方向+要素)*/
+            border-top-width: 5px;
+            border-top-style: solid;
+            border-top-color: blue;
+
+            border-right-width: 10px;
+            border-right-style: dashed;
+            border-right-color: green;
+
+            border-bottom-width: 15px;
+            border-bottom-style: dotted;
+            border-bottom-color: purple;
+
+            border-left-width: 20px;
+            border-left-style: double;
+            border-left-color: pink;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
