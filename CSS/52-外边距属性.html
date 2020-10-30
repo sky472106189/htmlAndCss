@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>52-外边距属性</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        span{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            background-color: red;/*外边距的那一部分是没有背景颜色的*/
+        }
+        div{
+            height: 100px;
+            border: 1px solid #000;
+        }
+        .box1{
+            /*
+            margin-top: 20px;
+            margin-right: 40px;
+            margin-bottom: 80px;
+            margin-left: 160px;*/
+            margin: 20px 40px 80px 160px;
+        }
+    </style>
+</head>
+<body>
+<span class="box1">我是span</span><span class="box2">我是span</span><span class="box3">我是span</span><div class="box"></div>
+</body>
+</html>

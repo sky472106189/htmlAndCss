@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>57-盒子BOX-sizing属性</title>
+    <style type="text/css">
+        .content{
+            height: 300px;
+            width: 300px;
+            background-color: red;
+        }
+        .aside{
+            width: 100px;
+            height: 200px;
+            background-color: green;
+            float: left;
+        }
+        .article{
+            /*
+            CSS3新增了box-sizing属性
+            具体见笔记
+            */
+            box-sizing: border-box;
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            float: right;
+            border: 20px solid #000;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <div class="aside"></div>
+    <div class="article"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>56-盒子宽高练习</title>
+    <style type="text/css">
+        /*判断是否内容宽高为100的盒子
+        只需要看width/height是否为100即可
+        box3是的*/
+        .box1{
+            width: 50px;
+            height: 50px;
+            padding: 25px;
+            background-color: green;
+        }
+        .box2{
+            width: 96px;
+            height: 96px;
+            border: 2px solid #000;
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+        /*判断是否元素宽高为200的盒子
+        只需要看 左边框 + 左内边距 + width/height + 右内边距 + 右边框 == 200
+        box5是的,box6是的*/
+        .box4{
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+            background-color: red;
+        }
+        .box5{
+            /*25+25+150 = 200*/
+            width: 150px;
+            height: 150px;
+            border: 25px solid #000;
+        }
+        .box6{
+            /*25+25+150 = 200*/
+            width: 150px;
+            height: 150px;
+            padding: 25px;
+            /*padding: 20px;
+            border: 5px solid #000;*/
+            background-color: blue;
+        }
+        /*判断元素空间宽高为300的盒子
+        左外边距 + 左边框 + 左内边距 + width/height + 右内边距 + 右边框 + 右外边距
+        box7是的,box8是的*/
+        .box7{
+            width: 300px;
+            height: 300px;
+            background-color: purple;
+        }
+        .box8{
+            /*50+50+25+25+25+25+100 = 300 */
+            width: 100px;
+            height: 100px;
+            padding: 25px;
+            border: 25px solid #000;
+            margin: 50px;
+        }
+        /*现有如下盒子模型,要求增加border属性为25之后仍然保持元素宽高为200
+
+        元素宽高 = 边框 + 内边距 +内容宽高
+                = 0 + 0 +200 = 200
+                = 0 + 25 + 25 +200 = 250
+                = 0 + 25 + 25 + 150 = 200
+        */
+        .box9{
+           /* width: 200px;
+            height: 200px;*/
+            width: 150px;
+            height: 150px;
+            padding: 25px;
+            background-color: red;
+        }
+        /*现有如下盒子模型,要求增加border属性为20之后仍然保持元素宽高为200
+        同理*/
+        .box10{
+            /*width: 200px;
+            height: 200px;*/
+            width: 160px;
+            height: 160px;
+            padding: 20px;
+            background-color: deepskyblue;
+        }
+    </style>
+</head>
+<body>
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+<hr>
+<div class="box4"></div>
+<div class="box5"></div>
+<div class="box6"></div>
+<hr>
+<div class="box7"></div>
+<div class="box8"></div>
+<hr>
+<div class="box9"></div>
+<div class="box10"></div>
+</body>
+</html>
