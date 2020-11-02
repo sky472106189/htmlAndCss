@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>76-清除浮动方式五</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            background-color: red;
+        }
+        .box2{
+            background-color: purple;
+            /*margin有效*/
+            /*margin-top: 20px;*/
+        }
+        ul{
+            list-style: none;
+        }
+        .ul01 li{
+            background-color: blue;
+        }
+        .ul02 li{
+            background-color: green;
+        }
+        li{
+            float: left;
+        }
+
+        /*这里*/
+        .clearfix::after {
+            /*生成内容作为最后一个元素*/
+            content: "";
+            /*使生成的元素以块级元素显示,占满剩余空间*/
+            display: block;
+            /*避免生成内容破坏原有布局的高度*/
+            height: 0;
+            /*使生成的内容不可见，并允许可能被生成内容盖住的内容可以进行点击和交互*/
+            visibility: hidden;
+            /*重点是这一句*/
+            clear: both;
+        }
+        .clearfix {
+             /*用于兼容IE, 触发IE hasLayout*/
+             *zoom:1;
+         }
+    </style>
+</head>
+<body>
+<div class="box1 clearfix">
+    <ul class="ul01">
+        <li>大娃</li>
+        <li>二娃</li>
+        <li>三娃</li>
+    </ul>
+</div>
+<div class="box2 clearfix2">
+    <ul class="ul02">
+        <li>李南江</li>
+        <li>极客江南</li>
+        <li>江哥</li>
+    </ul>
+</div>
+</body>
+</html>
