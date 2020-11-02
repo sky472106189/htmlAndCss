@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>82-绝对定位-子绝父相</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 800px;
+            height: 50px;
+            background-color: red;
+            list-style: none;
+            margin: 0px auto;
+            margin-top: 100px;
+        }
+        ul li{
+            width: 100px;
+            /*height: 50px;*/
+            line-height: 50px;
+            float: left;
+            background-color: gray;
+            text-align: center;
+        }
+        .li03{
+            background-color: darkgray;
+            position: relative;
+        }
+        ul li img{
+            /*
+            缺点以前的位置仍然被占用, 不能让文字居中对齐
+            */
+
+            /*position: relative;
+            left: -35px;
+            top: -15px;*/
+
+            /* 浏览器调整之后位置会发生变化*/
+
+            /* position: absolute;
+             top: 95px;
+             left: 535px;*/
+
+
+            position: absolute;
+            left: 37px;
+            top: -5px;
+
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>服装城</li>
+    <li>美妆馆</li>
+    <li>京东超市</li>
+    <li class="li03">全球购![](./img/hot.png)</li>
+    <li>闪购</li>
+    <li>团购</li>
+    <li>拍卖</li>
+    <li>江哥</li>
+</ul>
+</body>
+</html>
