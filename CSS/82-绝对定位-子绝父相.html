@@ -24,30 +24,34 @@
             background-color: gray;
             text-align: center;
         }
-        .li03{
-            background-color: darkgray;
+        ul li:nth-of-type(4){
+            background-color: yellow;
             position: relative;
         }
         ul li img{
             /*
-            缺点以前的位置仍然被占用, 不能让文字居中对齐
-            */
+            相对定位弊端：
+                相对定位不会脱离标准流,会继续在标准流中占用一份空间。不利于界面布局*/
+            /*
+            position: relative;
+            left: -20px;
+            top: -10px;
+             */
 
-            /*position: relative;
-            left: -35px;
-            top: -15px;*/
-
-            /* 浏览器调整之后位置会发生变化*/
-
-            /* position: absolute;
-             top: 95px;
-             left: 535px;*/
-
-
+            /*
+            绝对定位弊端：
+                默认情况下绝对定位的元素会以body作为参考点,所以会随着浏览器的宽度高度的变化而变化。*/
+            /*
             position: absolute;
-            left: 37px;
-            top: -5px;
-
+            left: 620px;
+            top: 90px;
+             */
+            position: absolute;
+            /*left: 40px;*/
+            /*使用水平居中*/
+            left:50%;
+            margin-left: -12px;
+            top: -11px;
         }
     </style>
 </head>
@@ -56,7 +60,7 @@
     <li>服装城</li>
     <li>美妆馆</li>
     <li>京东超市</li>
-    <li class="li03">全球购![](./img/hot.png)</li>
+    <li>全球购 <img src="./img/hot.png" alt="" width="25" height="25"></li>
     <li>闪购</li>
     <li>团购</li>
     <li>拍卖</li>
