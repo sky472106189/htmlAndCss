@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>90-CSS书写格式</title>
+<!--
+    2.内嵌样式
+    可以再一对head标签中写上一对style标签,然后再style标签中编写CSS代码
+    -->
+<!--
+    <style>
+        div{
+            color: blue;
+        }
+    </style>
+-->
+
+    <!--
+    3.外链样式  企业开发常用样式
+    可以单独新建一个.css文件,把css代码写到这个文件中,然后通过link标签把这个文件和.html关联起来
+    <link rel="stylesheet" href="91-CSS书写格式.css">
+    -->
+
+    <!--
+    4.导入样式
+    可以单独新建一个.css文件,把css代码写到这个文件中,然后通过@import标签把这个文件和.html关联起来
+    <style>
+        @import "91-CSS书写格式.css";
+    </style>-->
+</head>
+<body>
+<!--
+1.行内样式
+可以直接将CSS代码写到开始标签当中
+-->
+<!--<div style="color: red">我是div</div>-->
+
+<div>我是div</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>88-定位流-z-index属性</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+        }
+        .box1{
+            background-color: red;
+            position: relative;
+            left: 0;
+            top: 0;
+        }
+        .box2{
+            background-color: green;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            /*这里*/
+            z-index: 1;
+        }
+        .box3{
+            background-color: blue;
+            position: fixed;
+            left: 100px;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+</body>
+</html>
